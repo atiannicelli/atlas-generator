@@ -207,7 +207,7 @@ class DeployAtlasScriptOnAws(object):
                     terminate("{}/{} doesn't exist".format(self.s3util, param))
         if not is_key_exist_s3(self.s3bucket, self.osm_pbf_folder.partition(
                 self.s3bucket + '/')[2] + '/' + 'sharding.txt'):
-            terminate("{}/sharding.txt doesn't exist".format(self.s3util))
+            terminate("{}/sharding.txt doesn't exist".format(self.osm_pbf_folder))
 
     def generate_atlas_param(self) -> list:
         """
